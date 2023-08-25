@@ -21,10 +21,10 @@
 
 function task1() {
   
-    const uls = document.querySelectorAll(".item");
-    console.log(`Number of categories: ${uls.length}`);
+    const lis = document.querySelectorAll(".item");
+    console.log(`Number of categories: ${lis.length}`);
 
-    uls.forEach((li) => {
+    lis.forEach((li) => {
         const lis = li.lastElementChild.children.length;
         const name = li.firstElementChild.textContent;
        
