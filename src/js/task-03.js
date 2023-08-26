@@ -39,6 +39,7 @@ function task3() {
     const image = document.createElement("img");
     image.src = images.url;
     image.alt = images.alt;
+    image.classList.add("img-elements");
     findUl.append(li);
     li.append(image);
     image.insertAdjacentHTML("beforeend", images.alt);
