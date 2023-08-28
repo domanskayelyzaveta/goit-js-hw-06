@@ -14,3 +14,47 @@ function onInputChange(event) {
 }
 
 
+
+//////////////////////////////////////////////////
+
+const formEl = document.querySelector(".js-reg-form");
+formEl.addEventListener('submit', onFormElSubmit);
+
+
+function onFormElSubmit (event) {
+    event.preventDefault();
+    const login = formEl.elements.username.value;
+    console.log(formEl.elements.username.value);
+    const password = formEl.elements.passwordEl.value;
+    const data = { password, login };
+}
+
+
+function onFormSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const data = {};
+
+    formData.forEach((el, key) => {
+        data[key] = el;
+    });
+
+    console.log(data);
+
+}
+
+
+const inputEl = document.querySelector("#js-input-color");
+inputEl.addEventListener('change', onInputElChange);
+
+function onInputElChange(event) {
+    const color = inputEl.value;
+    formEl.style.backgroundColor = color;
+}
+
+const inputScale = document.querySelector("#js-input-size");
+inputScale.addEventListener("input", onInputScaleChange )
+function onInputScaleChange(event) {
+    const scaleValue = inputScale.value;
+    inputScale.style.transform = `scale ${scaleValue}`;
+}

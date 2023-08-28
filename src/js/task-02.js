@@ -24,8 +24,6 @@ const ingredients = [
 function task2() {
 
   const findUl = document.querySelector("#ingredients");
-  console.log(findUl);
-
   
   ingredients.forEach(ingredients => {
     const li = document.createElement("li");

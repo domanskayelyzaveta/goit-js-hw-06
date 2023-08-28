@@ -34,11 +34,13 @@ function task3() {
   const findUl = document.querySelector(".gallery");
 
   images.forEach((images) => {
+
     const li = document.createElement("li");
-    console.log(li);
     const image = document.createElement("img");
+
     image.src = images.url;
     image.alt = images.alt;
+    
     image.classList.add("img-elements");
     findUl.append(li);
     li.append(image);
