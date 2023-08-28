@@ -27,7 +27,7 @@ function getRandomHexColor() {
 colorButton.addEventListener('click', onColorButtonClick);
 
 
-function onColorButtonClick(event) {
+function onColorButtonClick(event) { /// тут не підсвічується подія "event", не розумію чому, але все працює
   let changeBackgroundColor = getRandomHexColor();
   bodyEl.style.backgroundColor = changeBackgroundColor;
   spanEl.textContent = changeBackgroundColor;
