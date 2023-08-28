@@ -43,6 +43,5 @@ inputEl.addEventListener('focus', onInputFocus);
 
 function onInputFocus(event) {
     inputEl.classList.remove('valid', 'invalid');
-
 }
 

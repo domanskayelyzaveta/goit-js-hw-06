@@ -29,22 +29,17 @@ const images = [
 ];
 
 
-function task3() {
 
-  const findUl = document.querySelector(".gallery");
+  const ulEl = document.querySelector(".gallery");
+ 
 
-  images.forEach((images) => {
+  const imgList = imgInfo => {
+  const { url, alt } = imgInfo;
 
-    const li = document.createElement("li");
-    const image = document.createElement("img");
+    return `<li><img  src="${url}" alt="${alt}" class = img-elements></li>`;
+  };
 
-    image.src = images.url;
-    image.alt = images.alt;
-    
-    image.classList.add("img-elements");
-    findUl.append(li);
-    li.append(image);
-    image.insertAdjacentHTML("beforeend", images.alt);
-  });
-}
-task3();
+  const imgArray = images.map(imgInfo => imgList(imgInfo));
+  ulEl.insertAdjacentHTML("beforeend", imgArray.join(""));
+
+

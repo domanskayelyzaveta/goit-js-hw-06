@@ -24,13 +24,16 @@ const ingredients = [
 function task2() {
 
   const findUl = document.querySelector("#ingredients");
+  const array = [];
   
-  ingredients.forEach(ingredients => {
+  ingredients.forEach(ingredient => {
     const li = document.createElement("li");
-    li.textContent = ingredients;
+    li.textContent = ingredient;
     li.classList.add("item");
-    findUl.append(li);
+    array.push(li);
   });
+  
+    findUl.append(...array);
 };
 task2();
 
