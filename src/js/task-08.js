@@ -31,10 +31,11 @@ function onFormSubmit(event) {
     const email = formEl.elements.email.value;
     const password = formEl.elements.password.value;
     if (email === "" || password === "") {
-        alert ("Всі поля повинні бути заповнені");
+        alert("Всі поля повинні бути заповнені");
     } else {
         const data = { email, password };
         console.log(data);
     
-    formEl.reset();
-}
+        formEl.reset();
+    }
+};
